@@ -16,7 +16,8 @@ var loadWeather = function(response){
 	var icon = response.current_observation.icon_url;
 	
 	//console.log('The current weather in ' + thisCity + ' is ' + weather + ' with a temperature of ' + temp);
-	
+
+	//in jQuery, this is the same as 'document.getElementsByClassName("temperature".innerText = temp;' in vanilla JS	
 	$('.temperature').text(temp);
 	$('.weather').text(weather);
 	$('.currentCity').val(thisCity);
@@ -30,7 +31,9 @@ var loadWeather = function(response){
 var getWeather = function(){
 	
 	var thisURL = 'http://api.wunderground.com/api/' + APIKey + '/conditions/q/' + state + '/' + city + '.json'	
-	
+	// e.g. http://api.wunderground.com/api/'MY_KEY'/conditions/q/NY/brooklyn.json
+
+
 	$.ajax({
 		url : thisURL,
 		dataType : "jsonp",
@@ -48,10 +51,11 @@ var getWeather = function(){
 var setLocation = function(){
 
 	//define the current city
+	//since currentCity is 
 	city = $('.currentCity').val();	
 	if(city == null || city == ''){
 		
-		alert('You ned to list a city!');
+		alert('You need to list a city!');
 		return;
 		
 	};
@@ -70,7 +74,10 @@ var init = function(){
 	console.log('What\'s the weather?');
 	
 	$('#submit').click(function(e){
+		//we're not actually submitting a form in the formal sense, so tell the browser not to actually submit anything in the traditional sense
 		e.preventDefault();
+
+		//gather our user supplied information
 		setLocation();
 	});
 	

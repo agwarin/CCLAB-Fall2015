@@ -5,6 +5,8 @@
 	<title>CCLab Week Three : Weather Widget</title>
 	<link rel="stylesheet" type="text/css" href="style/style.css">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/main.js"></script>
 </head>
 <body>
 
@@ -25,16 +27,14 @@
 					Mostly Cloudy
 				</div>
 			</div>
-
-			
-
-			
-
 		
 		</div>
 	
 		<form class="currentLocation">
+			<!-- make a text box for us to type in a city -->
 			<input type="text" class="currentCity">
+
+			<!-- create a selection box (drop-down) to select a state -->
 			<select class="currentState">
 				<option value="AK">AK</option>
 				<option value="AL">AL</option>
@@ -87,12 +87,11 @@
 				<option value="WY">WY</option>
 			</select>
 			
+			<!-- place a submit button so we can observe the submission event -->
 			<input type="submit" id="submit" value="go">
 		</form>
 		
 		
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/main.js"></script>
 </body>
 </html>
