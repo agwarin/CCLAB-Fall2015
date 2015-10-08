@@ -1,6 +1,6 @@
 var city = '';
 var state = '';
-var APIKey = 'YOUR_API_KEY_HERE';
+var APIKey = 'e4a681faf69d3868';
 
 //loadWeather
 var loadWeather = function(response){
@@ -11,13 +11,13 @@ var loadWeather = function(response){
 	};
 	
 	var thisCity = response.current_observation.display_location.city;
-	var temp = response.current_observation.temp_f + '°';
+	var temp = response.observation_location.full + '°';
 	var weather = response.current_observation.weather;
 	var icon = response.current_observation.icon_url;
 	
 	//console.log('The current weather in ' + thisCity + ' is ' + weather + ' with a temperature of ' + temp);
 
-	//in jQuery, this is the same as 'document.getElementsByClassName("temperature".innerText = temp;' in vanilla JS	
+	//in jQuery, this is the same as 'document.getElementsByClassName("temperature").innerText = temp;' in vanilla JS	
 	$('.temperature').text(temp);
 	$('.weather').text(weather);
 	$('.currentCity').val(thisCity);
