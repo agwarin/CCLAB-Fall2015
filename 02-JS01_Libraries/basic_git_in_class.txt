@@ -1,0 +1,10 @@
+git clone XXXXXXXXXXX
+cd XXXXXXXX
+
+MAKE ALL OF MY CHANGES
+MAKE MORE CHANGES
+MAKE FINAL CHANGE
+
+git add --a
+git commit -m "all dem changes"
+git push origin master
