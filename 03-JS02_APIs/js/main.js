@@ -1,6 +1,6 @@
 var city = '';
 var state = '';
-var APIKey = 'YOUR_API_KEY_HERE';
+var APIKey = 'df231997dd37c42d';
 
 //loadWeather
 var loadWeather = function(response){

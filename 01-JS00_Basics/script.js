@@ -58,8 +58,10 @@ var updateTasks = function(){
 		
 		
 	};
-	
-};
+	document.querySelector('html').onclick = function() {
+    alert('Ouch! Stop poking me!');
+}
+};//updateTasks close
 
 //save task
 var saveTask = function(){
